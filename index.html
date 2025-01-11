@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your EV charging slot at our Green EV Charging Station. Fast, secure, and hassle-free online booking.">
+    <meta name="keywords" content="EV Charging, Slot Booking, Green Energy, Electric Vehicle, Online Payment">
+    <meta name="author" content="Green EV Charging Station">
+    <title>Green EV Charging Slot Booking</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #a8e063, #56ab2f); /* Updated gradient */
+            color: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Add background graphics */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            filter: blur(50px);
+        }
+        body::after {
+            content: '';
+            position: absolute;
+            bottom: 10%;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            filter: blur(50px);
+        }
+
+        header {
+            background: #2ecc71;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            background: #ffffff;
+            border-radius: 12px;
+            max-width: 400px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 10;
+        }
+
+        form label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #333;
+            text-align: left;
+        }
+
+        form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        form input:focus {
+            outline: none;
+            border-color: #27ae60;
+            box-shadow: 0 0 6px rgba(39, 174, 96, 0.5);
+        }
+
+        form button {
+            width: 100%;
+            background: linear-gradient(135deg, #27ae60, #2ecc71); /* Button gradient */
+            color: #fff;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        form button:hover {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            transform: scale(1.05);
+        }
+
+        h1 {
+            margin: 10px 0 20px;
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fff;
+            z-index: 10;
+        }
+
+        p.subtitle {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            z-index: 10;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>Green EV Charging Station</header>
+        <h1>Book Your Charging Slot</h1>
+        <p class="subtitle">Eco-Friendly Charging Solutions, Anytime, Anywhere</p>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile" name="mobile" placeholder="Enter your mobile number" required pattern="\d{10}" title="Enter a valid 10-digit mobile number">
+
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+        <footer>© 2024 Green EV Charging Station | Powered by Sustainable Energy</footer>
+    </div>
+</body>
+</html>
